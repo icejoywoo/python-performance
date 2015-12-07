@@ -16,6 +16,12 @@ def even_filter_lc():
     return [i for i in xrange(1000) if i % 2 == 0]
 
 
+def even_filter_2():
+    """ built-in filter function
+    """
+    return filter(lambda x: x % 2 == 0, xrange(1000))
+
+
 def even_filter():
     r = []
     for i in xrange(1000):
@@ -26,4 +32,5 @@ def even_filter():
 
 if __name__ == '__main__':
     print perf.perf(even_filter)
+    print perf.perf(even_filter_2)
     print perf.perf(even_filter_lc)
